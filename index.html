@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yalantis test task</title>
+  
+<!--  styles-->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+ <header>
+   <h1>Test task for Yalantis School using VueJS</h1>
+ </header>
+ <main>
+   <div class="main-wr" id="app">
+    <div class="row">
+       <div 
+          class="col col-1"
+          v-for="month, index of monthes">
+         <div 
+            class="month-wr" 
+            v-bind:class="month.statusClass"
+            v-on:mouseenter="show(index)"
+            v-on:mouseleave="hide">
+           <p>{{month.name}}</p>
+         </div>
+      </div>
+     </div>
+      <div class="users-wr" v-show="sortedUsers.length">
+       <div class="row heading">
+        <div class="col col-1 ml-auto">
+          <p>#</p>
+        </div>
+         <div class="col col-2">
+           <p>First Name</p>
+         </div>
+         <div class="col col-2">
+           <p>Last Name</p>
+         </div>
+         <div class="col col-2 mr-auto">
+           <p>Date Of Birth</p>
+         </div>
+       </div>
+        <div v-for="user, index in sortedUsers" class="row user">
+         <div class="col col-1 ml-auto">
+           <p>{{index + 1}}.</p>
+         </div>
+          <div class="col col-2">
+            <p>{{user.firstName}}</p>
+          </div>
+          <div class="col col-2">
+            <p>{{user.lastName}}</p>
+          </div>
+          <div class="col col-2 mr-auto">
+            <p>{{chosenMonth + ' ' + displayDate(user.dob)}}</p>
+          </div>
+        </div>
+      </div>
+   </div>
+ </main>
+ <footer>
+   
+ </footer>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="./main.js" defer></script>
+</body>
+</html>
