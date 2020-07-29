@@ -1,6 +1,19 @@
+body {
+  background-color: #C0EBCA !important;
+}
+
 header h1 {
   text-align: center;
   padding: 50px 0;
+  color: #333;
+}
+
+span.vue {
+  color: #34495E;
+}
+
+span.js {
+  color: #41B883;
 }
 
 .main-wr {
@@ -12,6 +25,7 @@ header h1 {
 .col.col-1 {
   padding-left: 2px;
   padding-right: 2px;
+  cursor: pointer;  
 }
 
 .month-wr {
@@ -19,7 +33,7 @@ header h1 {
 }
 
 .month-wr:hover {
-  opacity: 60%;
+  opacity: 80%;
 }
 
 .month-wr p {
