@@ -83,3 +83,7 @@ span.js {
   margin-bottom: 0;
   padding: 4px 0px;
 }
+
+footer p {
+  text-align: center;
+}
