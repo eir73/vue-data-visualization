@@ -108,6 +108,9 @@ const app = new Vue({
           }
         })
       })
+      .catch(err => {
+        throw err;
+      })
   },
   methods: {
     show(index) {

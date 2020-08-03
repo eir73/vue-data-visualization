@@ -1,5 +1,5 @@
 body {
-  background-color: #C0EBCA !important;
+  background-color: #f7fbfe !important;
 }
 
 header h1 {
@@ -30,10 +30,21 @@ span.js {
 
 .month-wr {
   padding: 10px 0;
+  border-radius: 4px;
+}
+
+.main-wr > p {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
 }
 
 .month-wr:hover {
   opacity: 80%;
+}
+
+.month-wr:hover p {
+  font-weight: 500;
 }
 
 .month-wr p {
@@ -52,19 +63,27 @@ span.js {
 }
 
 .month-wr.red {
-  background-color: #CC411FB9;
+  box-shadow:inset 1px 1px 15px 1px #CC411FB9;
 }
 
 .month-wr.blue {
-  background-color: #115ED1B9;
+  box-shadow:inset 1px 1px 15px 1px #115ED1B9;
 }
 
 .month-wr.green {
-  background-color: #07E869B9;
+  box-shadow:inset 1px 1px 15px 1px #07E869B9;
 }
 
 .users-wr {
   padding-top: 20px;
+}
+
+.users-wr .col {
+  background-color: #fefefe;
+}
+
+.users-wr .col-1 {
+  text-align: center;
 }
 
 .users-wr .heading p{
@@ -76,9 +95,37 @@ span.js {
   font-size: 18px;
 }
 
-.users-wr .user .col {
-  border-bottom: 1px solid #ccc;
+.users-wr > p {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 15px;
 }
+
+.users-wr .user .col {
+  border-bottom: 1px solid #cbcbcb;
+}
+
+.users-wr .row:last-child .col {
+  border-bottom: none;
+}
+
+.users-wr .heading .col.ml-auto {
+  border-top-left-radius: 7px;
+}
+
+.users-wr .heading .col.mr-auto {
+  border-top-right-radius: 7px;
+}
+
+.users-wr .row:last-child .col.mr-auto {
+  border-bottom-right-radius: 7px;
+}
+
+.users-wr .row:last-child .col.ml-auto {
+  border-bottom-left-radius: 7px;
+}
+
+
 .users-wr .user p {
   margin-bottom: 0;
   padding: 4px 0px;
@@ -86,4 +133,7 @@ span.js {
 
 footer p {
   text-align: center;
+  margin-bottom: 0.5rem;
+  padding-top: 0.25rem;
+  border-top: 1px solid #ccc;
 }

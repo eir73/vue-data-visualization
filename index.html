@@ -10,10 +10,13 @@
 </head>
 <body>
  <header>
-   <h1>Test task for Yalantis School using <span class="vue">Vue</span><span class="js">JS</span></h1>
+   <h1>Test task for Yalantis School using <span class="vue">Vue</span><span class="js">JS</span> + <span class="vue">Fetch</span></h1>
  </header>
  <main>
-   <div class="main-wr" id="app">
+   <div 
+     class="main-wr" 
+     id="app"
+     @click="hide">
     <div class="row">
        <div 
           class="col col-1"
@@ -21,31 +24,34 @@
          <div 
             class="month-wr" 
             v-bind:class="month.statusClass"
-            v-on:mouseenter="show(index)"
-            v-on:mouseleave="hide">
+            v-on:mouseenter="show(index)">
            <p>{{month.name}}</p>
          </div>
       </div>
      </div>
-      <div class="users-wr" v-show="sortedUsers.length">
-       <div class="row heading">
-        <div class="col col-1 ml-auto">
-          <p>#</p>
+      <div 
+        class="users-wr" 
+        v-show="sortedUsers.length">
+        <div class="row heading">
+          <div class="col col-1 ml-auto">
+            <p>#</p>
+          </div>
+           <div class="col col-2">
+             <p>First Name</p>
+           </div>
+           <div class="col col-2">
+             <p>Last Name</p>
+           </div>
+           <div class="col col-2 mr-auto">
+             <p>Date of Birth</p>
+           </div>
         </div>
-         <div class="col col-2">
-           <p>First Name</p>
-         </div>
-         <div class="col col-2">
-           <p>Last Name</p>
-         </div>
-         <div class="col col-2 mr-auto">
-           <p>Date of Birth</p>
-         </div>
-       </div>
-        <div v-for="user, index in sortedUsers" class="row user">
-         <div class="col col-1 ml-auto">
-           <p>{{index + 1}}.</p>
-         </div>
+        <div 
+          v-for="user, index in sortedUsers" 
+          class="row user">
+          <div class="col col-1 ml-auto">
+            <p>{{index + 1}}.</p>
+          </div>
           <div class="col col-2">
             <p>{{user.firstName}}</p>
           </div>
@@ -56,7 +62,9 @@
             <p>{{chosenMonth + ' ' + displayDate(user.dob)}}</p>
           </div>
         </div>
+        <p>To hide the list, click to the left or right of it</p>
       </div>
+       <p v-show="!sortedUsers.length">Hover your mouse over a month to view the list of people born that month.</p>
    </div>
  </main>
  <footer>
